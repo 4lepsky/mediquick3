@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - MediQuick</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fdf1eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column; /* Stack elements vertically */
+            overflow: hidden;
+        }
+
+        .header-image {
+            max-width: 150px; /* Adjust the size as needed */
+            margin-bottom: 20px; /* Space between the image and the text */
+            position: absolute; /* Make the image position absolute */
+            top: 20px; /* Aligns the image at the top */
+            left: 50%; /* Centers the image horizontally */
+            transform: translateX(-50%); /* Corrects the centering */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column; /* Aligns children in a column */
+            align-items: center; /* Centers children horizontally */
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #b80000;
+            margin-bottom: 10px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        p {
+            font-size: 20px;
+            color: #333;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        /* Fade in animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Slide-in animation */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Letter bounce animation */
+        .animation-wrapper {
+            display: inline-block;
+        }
+
+        .animation-wrapper span {
+            font-size: 72px;
+            color: #b80000;
+            font-weight: bold;
+            display: inline-block;
+            opacity: 1;
+            transform: translateY(0);
+            animation: bounceLetters 1s ease-in-out forwards;
+        }
+
+        @keyframes bounceLetters {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            60% {
+                opacity: 1;
+                transform: translateY(-10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add delays for each letter */
+        .animation-wrapper span:nth-child(1) { animation-delay: 0.1s; }
+        .animation-wrapper span:nth-child(2) { animation-delay: 0.2s; }
+        .animation-wrapper span:nth-child(3) { animation-delay: 0.3s; }
+        .animation-wrapper span:nth-child(4) { animation-delay: 0.4s; }
+        .animation-wrapper span:nth-child(5) { animation-delay: 0.5s; }
+        .animation-wrapper span:nth-child(6) { animation-delay: 0.6s; }
+        .animation-wrapper span:nth-child(7) { animation-delay: 0.7s; }
+    </style>
+</head>
+<body>
+    <!-- Header Image -->
+    <img src="assets/logo.png" alt="Header Image" class="header-image">
+    <div class="container">
+        <!-- WELCOME with animated letters -->
+        <div class="animation-wrapper">
+            <span>W</span>
+            <span>E</span>
+            <span>L</span>
+            <span>C</span>
+            <span>O</span>
+            <span>M</span>
+            <span>E</span>
+        </div>
+        <!-- Subheading -->
+        <h1>TO MEDIQUICK</h1>
+        <p>YOUR PERSONAL HEALTH COMPANION</p>
+    </div>
+</body>
+</html>
